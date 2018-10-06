@@ -12,7 +12,6 @@ public class WelcomeController {
 	private PerSionDao perSionDao;
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		//List<Student> st = perSionDao.getAllArticles();
 		perSionDao.removeStudent(2);
 		model.put("message", 5);
 		return "welcome";
